@@ -100,29 +100,29 @@ public class BankStatementProcessor {
         }
         return transactionFiltradas;
     }
+
     public double calculateMinAmount () {
-        List<BankTransaction> filterAmount=filterByDate("2017-01-01", "2017-12-13");
+        List<BankTransaction> filterAmount = filterByDate("2017-01-01", "2017-12-13");
         double min = 0;
         for (BankTransaction transactionMinAmount : filterAmount) {
             if (transactionMinAmount.getAmount().getValue() < min) {
                 min = transactionMinAmount.getAmount().getValue();
-                System.out.println(min);
 
             }
         }
-
+        System.out.println(min);
         return min;
     }
+
     public double calculateMaxAmount () {
-        List<BankTransaction> filterAmount=filterByDate("2017-01-01", "2017-12-13");
+        List<BankTransaction> filterAmount = filterByDate("2017-01-01", "2017-12-13");
         double max = 0;
         for (BankTransaction transactionMaxAmount : filterAmount) {
             if (transactionMaxAmount.getAmount().getValue() > max) {
                 max = transactionMaxAmount.getAmount().getValue();
-                System.out.println(max);
             }
         }
-
+        System.out.println(max);
         return max;
     }
 }

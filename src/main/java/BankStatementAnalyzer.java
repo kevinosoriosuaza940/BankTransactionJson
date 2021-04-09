@@ -63,7 +63,6 @@ public class BankStatementAnalyzer {
                 bankStatementProcessor.calculateMin(),
                 bankStatementProcessor.calculateMax(),
                 bankStatementProcessor.calculateAverage(),
-                bankStatementProcessor.filterByDate("2027-01-01", "2027-12-13"),
                 bankStatementProcessor.calculateMinAmount(),
                 bankStatementProcessor.calculateMaxAmount()
 

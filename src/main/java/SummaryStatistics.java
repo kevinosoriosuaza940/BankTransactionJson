@@ -6,7 +6,7 @@ public class SummaryStatistics {
     private final double max;
     private final double average;
 
-    public SummaryStatistics (double sum, double min, double max, double average, List<BankTransaction> bankTransactions, double calculateMinAmount, double v) {
+    public SummaryStatistics (double sum, double min, double max, double average, double calculateMinAmount, double v) {
         this.sum = sum;
         this.min = min;
         this.max = max;
