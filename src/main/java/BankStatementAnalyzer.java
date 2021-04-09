@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -61,7 +62,12 @@ public class BankStatementAnalyzer {
                 bankStatementProcessor.calculateTotal(),
                 bankStatementProcessor.calculateMin(),
                 bankStatementProcessor.calculateMax(),
-                bankStatementProcessor.calculateAverage()
+                bankStatementProcessor.calculateAverage(),
+                bankStatementProcessor.filterByDate("2027-01-01", "2027-12-13"),
+                bankStatementProcessor.calculateMinAmount(),
+                bankStatementProcessor.calculateMaxAmount()
+
+
         );
     }
 }
